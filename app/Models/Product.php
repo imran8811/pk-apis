@@ -24,6 +24,7 @@ class Product extends Model {
         'category',
         'type',
         'length',
+        'slug',
     ];
 
     /**
@@ -46,6 +47,6 @@ class Product extends Model {
     ];
 
     public function productImages(){
-        return $this->hasOne(ProductImages::class, 'article_no', 'article_no');
+        return $this->hasMany(ProductImages::class, 'article_no', 'article_no');
     }
 }

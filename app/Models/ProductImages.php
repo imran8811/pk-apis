@@ -35,4 +35,8 @@ class ProductImages extends Model {
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function products(){
+        return $this->belongsTo(Products::class, 'article_no', 'article_no');
+    }
 }
