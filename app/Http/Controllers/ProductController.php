@@ -157,7 +157,7 @@ class ProductController extends Controller {
       'length' => 'required',
       'slug' => 'required',
     ]);
-    $profile = Product::where('id', $request->id)->update([
+    $profile = Product::where('article_no', $request->id)->update([
       'sizes' => $formFields['sizes'], 
       'colors' => $formFields['colors'], 
       'fitting' => $formFields['fitting'], 
